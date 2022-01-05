@@ -12,7 +12,7 @@
   <% @blogs.each do |blog| %>
     <tr>
       <td scope="row"><%= link_to blog.title, blog_path(blog.id) %></td>
-      <td><%= blog.created_at %></td>
+      <td><%= relative_post_datetime(blog.created_at) %></td>
       <td><%= link_to "編集", edit_blog_path(blog.id) %></td>
       <td><%= link_to "削除", blog_path(blog.id), method: :delete, data: {confirm: "本当に削除しますか?"} %></td>
     </tr>
