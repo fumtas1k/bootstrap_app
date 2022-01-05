@@ -1,3 +1,9 @@
+<% if !notice.nil? %>
+  <div class="alert alert-success">
+    <%= notice %>
+  </div>
+<% end %>
+
 <div class="top-wrapper">
   <h3>ブログ一覧</h3>
   <%= link_to "新規作成", new_blog_path, class: "btn btn-primary btn-new" %>
