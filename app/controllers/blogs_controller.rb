@@ -1,5 +1,5 @@
 class BlogsController < ApplicationController
-  before_action :set_blog, only: [:show, :edit, :destroy]
+  before_action :set_blog, only: [:show, :edit, :update, :destroy]
   def index
     @blogs = Blog.all.order(created_at: :desc)
   end
@@ -24,6 +24,14 @@ class BlogsController < ApplicationController
   end
 
   def edit
+  end
+
+  def update
+    if @blog.update(blog_params)
+      redirect_to blogs_path, notice: "編集しました!"
+    else
+      render :edit
+    end
   end
 
   private

@@ -1,7 +1,11 @@
 <div class="top-wrapper">
   <h3><%= blogs_title %></h3>
   <div class="btn-wrapper">
+    <% if blogs_title == "詳細" %>
+      <%= link_to "編集", edit_blog_path, class: "btn btn-info" %>
+      <%= link_to "削除", blog_path, class: "btn btn-danger", method: :delete, data: {confirm: "本当に削除しますか?"} %>
+    <% end %>
     <%= link_to "一覧", blogs_path, class: "btn btn-warning"%>
-    <%= link_to "新規投稿", new_blog_path, class: "btn btn-primary btn-new" %>
+    <%= link_to "新規投稿", new_blog_path, class: "btn btn-primary" %>
   </div>
 </div>
