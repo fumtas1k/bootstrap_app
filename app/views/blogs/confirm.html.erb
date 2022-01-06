@@ -1,3 +1,4 @@
+<% provide(:title, "確認画面") %>
 <%= render partial: "top_wrapper", locals: {blogs_title: "確認"} %>
 <%= form_with model: @blog, local: true do |form| %>
   <%= form.hidden_field :title %>
