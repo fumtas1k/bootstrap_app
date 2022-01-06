@@ -34,6 +34,11 @@ class BlogsController < ApplicationController
     end
   end
 
+  def destroy
+    @blog.destroy
+    redirect_to blogs_path, notice: "削除しました!"
+  end
+
   private
     def blog_params
       params.require(:blog).permit(:title, :content)
