@@ -1,10 +1,4 @@
-<div class="top-wrapper">
-  <h3>詳細</h3>
-  <div class="btn-wrapper">
-    <%= link_to "一覧", blogs_path, class: "btn btn-warning"%>
-    <%= link_to "新規投稿", new_blog_path, class: "btn btn-primary btn-new" %>
-  </div>
-</div>
+<%= render partial: "top_wrapper", locals: {blogs_title: "詳細"} %>
 
 <div class="form-group">
   <p>タイトル</p>
