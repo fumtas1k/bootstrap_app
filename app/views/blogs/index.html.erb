@@ -11,6 +11,15 @@
   </div>
 <% end %>
 
+<div id="modal-wrapper">
+  <div id="modal">
+    <div id="close-modal">
+      <span>x</span>
+    </div>
+    <%= render partial: "form" %>
+  </div>
+</div>
+
 <%= render partial: "top_wrapper", locals: {blogs_title: "ブログ一覧"} %>
 
 <table class="table table-straiped">
@@ -29,3 +38,5 @@
     </tr>
   <% end %>
 </table>
+
+<button type="btn" class="btn btn-primary" id="btn-new">新規投稿</button>
