@@ -10,4 +10,12 @@ module BlogsHelper
     return "#{mins}分" unless mins.zero?
     "#{sec}秒"
   end
+
+  def choose_new_or_edit
+    if ["new", "create", "confirm"].include?(action_name)
+      confirm_blogs_path
+    elsif action_name == "edit"
+      blog_path
+    end
+  end
 end
