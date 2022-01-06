@@ -6,8 +6,12 @@
 
 <div class="top-wrapper">
   <h3>ブログ一覧</h3>
-  <%= link_to "新規作成", new_blog_path, class: "btn btn-primary btn-new" %>
+  <div class="btn-wrapper">
+    <%= link_to "一覧", blogs_path, class: "btn btn-warning"%>
+    <%= link_to "新規投稿", new_blog_path, class: "btn btn-primary btn-new" %>
+  </div>
 </div>
+
 <table class="table table-straiped">
   <tr>
     <th scope="col">タイトル</th>
