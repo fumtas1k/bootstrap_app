@@ -4,6 +4,7 @@ require("@rails/activestorage").start()
 require("channels")
 import "bootstrap";
 import "../stylesheets/application";
+import "../stylesheets/bootstrap_overrides.scss";
 
 $(function(){
   $("#close-modal").on("click", function(){
