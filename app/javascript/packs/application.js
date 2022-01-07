@@ -1,3 +1,4 @@
+//= require rails-timeago
 require("@rails/ujs").start()
 require("turbolinks").start()
 require("@rails/activestorage").start()

@@ -1,0 +1,27 @@
+<% provide(:title, "ホーム/tweet_clone") %>
+
+<div class="row">
+  <div class="sidebar col-lg-4">
+    <i class="far fa-comment-dots"></i>
+  </div>
+  <main class="col-lg-4">
+    <% @blogs.each do |blog| %>
+      <article>
+        <div class="boarder-wrapper">
+          <div class="image-wrapper">
+            <img class="icon-image" src="/assets/icon.jpg">
+          </div>
+          <div class="board-wrapper">
+            <div class="board-header">
+              <h4>投稿者名</h4>
+              <p><%= time_ago_in_words(blog.created_at) %></p>
+            </div>
+            <div class="board">
+              <p>aaaaaaaaaaaaaaaaaaaaaaaaa.<br>aaaaaaaaa</p>
+            </div>
+          </div>
+        </div>
+      </article>
+    <% end %>
+  </main>
+</div>
